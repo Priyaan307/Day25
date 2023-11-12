@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-image: url("img/deepawali.jpg");
+  background-size: cover;
+}
+.container {
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+.light{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    border: 3px solid orange;
+    background: linear-gradient(90deg, #ffd700, red);
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+.light::before{
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 75px;
+    width: 35px;
+    height: 70px;
+    background-color: yellow;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    transform-origin: bottom right;
+    filter: blur(2px);
+    animation: animate 5s linear infinite;
+}
+
+
+p {
+  font-size: 30px;
+  color: white;
+}
+
+h1 {
+    font-size: initial;
+    color: aliceblue;
+    font-size: 70px;
+    animation: sec 2s infinite;
+}
+
+
+@keyframes rotate{
+    0%{
+      transform: scale(1.1) rotate(0deg);
+    }
+    100%{
+      transform: scale(1.1) rotate(360deg);
+    }
+  }
+
+  @keyframes animate{
+      0%{
+          transform: rotate(20deg);
+          box-shadow: 0 0 30px rgb(255, 255, 0);
+      }
+      25%{
+          transform: rotate(10deg);
+      }
+      50%{
+          transform: rotate(5deg);
+      }
+      75%{
+          transform: rotate(15deg);
+          box-shadow: 0 0 30px rgb(255, 255, 0);
+      }
+      100%{
+          transform: rotate(20deg);
+      }
+  }
+
+  @keyframes sec{
+      0%{
+          color: orange;
+      }
+      10%{
+          color: red;
+      }
+      20%{
+          color: rgb(212, 66, 66);
+          letter-spacing: 2px;
+      }
+      30%{
+          color: rgb(55, 134, 55);
+      }
+      40%{
+          color: light;
+      }
+      50%{
+          color: lightblue;
+          letter-spacing: 5px;
+      }
+      60%{
+          color: magenta;
+      }
+      70%{
+          color: lightseagreen;
+      }
+      80%{
+          color: lightblue;
+          letter-spacing: 2px;
+      }
+      90%{
+        color: bisque;
+      }
+      100%{
+          color: yellow;
+          letter-spacing: 0px;
+      }
+  }
+
+
+.circle{
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    height: 250px;
+    width: 250px;
+    border: 4px dotted orange;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ffd700, #ff6347);
+    opacity: 0.8;
+}
+@media (min-width: 200px) and (max-width: 500px) {
+    body {
+        background-image: url('img/sparkles.gif');
+    }
+    p {
+        font-size: 14px;
+    }
+}
+@media (min-width: 500px) and (max-width: 900px) {
+  body {
+    background-image: url("img/img2.jpeg");
+  }
+  
+}
+@media (min-width: 901px) {
+  body {
+    background-image: url("img/deepawali.jpg");
+  }
+}
